@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_margin="10sp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MainActivity"
+        android:layout_gravity="center"
+        android:layout_marginTop="10sp"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        />
+
+    <!-- add part for opening second activity -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp">
+        <TextView
+            android:id="@+id/exp_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explicit Intent: "
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            />
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Second Activity"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20sp"
+            />
+    </LinearLayout>
+
+    <!-- add part for sending data to second activity -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explicit Intent: (data send)"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            />
+
+        <EditText
+            android:id="@+id/data_send_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sample Data"
+            android:layout_marginLeft="10sp"
+            />
+        <Button
+            android:id="@+id/data_send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10sp"
+            />
+    </LinearLayout>
+
+    <!-- add part for opening web browser -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp">
+        <TextView
+            android:id="@+id/url_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WebPage(Implicit): "
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            />
+        <EditText
+            android:id="@+id/web_queryurl_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="query/http_url"
+            android:layout_gravity="center"
+            android:ems="10" />
+
+        <Button
+            android:id="@+id/open_browser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText1"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:text="Open"
+            />
+    </LinearLayout>
+
+    <!-- add part for opening phone dialer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp">
+        <TextView
+            android:id="@+id/dialer_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dialer(Implicit): "
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            />
+
+
+        <EditText
+            android:id="@+id/dialer_number"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0123546789"
+            android:layout_marginLeft="20dp" />
+
+
+        <Button
+            android:id="@+id/open_dialer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:text="Open" />
+    </LinearLayout>
+
+    <!-- add part for opening contacts -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp">
+
+        <TextView
+            android:id="@+id/contacts_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contacts (Implicit): "
+            />
+        <Button
+            android:id="@+id/open_contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open"
+            android:layout_marginLeft="20sp"></Button>
+    </LinearLayout>
+
+    <!-- add part for sending emails -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Write Emails (Implicit):"/>
+
+        <LinearLayout
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="5sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/email_to"
+                android:text="to@email.com"
+                android:layout_weight="0.70"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2sp"
+                />
+
+            <EditText
+                android:id="@+id/email_subject"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="0.30"
+                android:layout_margin="2sp"
+                android:text="Subject"
+                />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/email_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:height="100sp"
+            android:text="This is a sample email text"
+            android:layout_marginTop="5sp"/>
+
+        <Button
+            android:id="@+id/email_send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10sp"
+            android:text="Send"
+            />
+    </LinearLayout>
+    <!-- add part for passing data -->
+</LinearLayout>
